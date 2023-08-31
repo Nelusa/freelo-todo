@@ -14,7 +14,7 @@ const Assignee = ({ todo }: AssigneeProps) => {
   return (
     <>
       <div
-        className="flex justify-center items-center rounded-full bg-zinc-400 border-2 border-sky-600 text-white  font-bold p-1 "
+        className="flex justify-center items-center rounded-full bg-zinc-400 border-2 cursor-default border-sky-600 text-white  font-bold p-1 "
         data-tooltip-id="assignee"
         data-tooltip-content={todo.assignee}
         data-tooltip-place="top"

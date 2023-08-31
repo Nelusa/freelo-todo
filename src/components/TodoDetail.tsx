@@ -1,9 +1,4 @@
-import {
-  PencilIcon,
-  PlayIcon,
-  TagIcon,
-  ExclamationTriangleIcon,
-} from "@heroicons/react/24/outline";
+import { PencilIcon, PlayIcon, TagIcon } from "@heroicons/react/24/outline";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 import Icon from "./ui/Icon";
 import Checkbox from "./ui/Checkbox";
@@ -22,6 +17,7 @@ import {
 } from "../store/todoSlice";
 import EditForm from "./forms/EditForm";
 import classNames from "../helpers/classNames";
+import Priority from "./ui/Priority";
 
 const TodoDetail = () => {
   const { taskId } = useParams();
@@ -105,17 +101,7 @@ const TodoDetail = () => {
             <Icon>
               <TagIcon className="cursor-not-allowed" />
             </Icon>
-            <Icon>
-              <ExclamationTriangleIcon
-                className={
-                  todo?.priority === "high"
-                    ? "text-red-600"
-                    : todo?.priority === "medium"
-                    ? "text-yellow-600"
-                    : "text-green-600"
-                }
-              />
-            </Icon>
+            <Priority todo={todo} isDetail={true} />
           </div>
         </div>
       </li>

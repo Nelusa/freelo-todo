@@ -5,11 +5,13 @@ const Icon = ({
   strokeWidth,
   className,
   onClick,
+  cursor = "cursor-pointer",
 }: {
   children: React.ReactNode;
   strokeWidth?: number;
   className?: string;
   onClick?: () => void;
+  cursor?: string;
 }) => {
   const iconStyle = {
     width: "20px",
@@ -20,7 +22,7 @@ const Icon = ({
     <div
       onClick={onClick}
       style={{ ...iconStyle, strokeWidth: `${strokeWidth}px` }}
-      className={`cursor-pointer ${className}`}
+      className={`${cursor} ${className}`}
     >
       {cloneElement(children as React.ReactElement, {
         strokeWidth: strokeWidth || 2,

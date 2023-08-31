@@ -23,7 +23,7 @@ const DueDate = ({ todo }: DueDateProps) => {
   return (
     <>
       <div
-        className="flex flex-col leading-3 text-center "
+        className="flex flex-col leading-3 text-center cursor-default"
         data-tooltip-id="dueDate"
         data-tooltip-content={fullDate}
         data-tooltip-place="top"
