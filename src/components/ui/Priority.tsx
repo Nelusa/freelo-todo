@@ -18,7 +18,7 @@ const Priority = ({
       <>
         <div
           className={classNames(
-            "absolute w-1 h-[90%] rounded-r-lg md:hidden",
+            "absolute w-1 h-[90%] rounded-r-lg md:hidden text-xs",
             todo.priority === "low"
               ? "bg-green-600"
               : todo.priority === "medium"
@@ -30,8 +30,12 @@ const Priority = ({
             todo.priority.charAt(0).toUpperCase() + todo.priority.slice(1)
           }
           data-tooltip-place="top"
-        />
-        <Tooltip id="priority" className="padding-container padding-tooltip " />
+        >
+          <Tooltip
+            id="priority"
+            className="padding-container padding-tooltip md:hidden"
+          />
+        </div>
       </>
     );
   } else {

@@ -80,7 +80,8 @@ const TodoForm = ({ onShowForm, onAddTask }: FormProps) => {
           type="text"
           name="taskDescription"
           id="taskDescription"
-          className="border focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-sky-400 focus:border-transparent rounded-md p-2 placeholder:text-gray-400 placeholder:font-light "
+          className="border focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-sky-400 focus:border-transparent rounded-md p-2 placeholder:text-gray-400 placeholder:font-light"
+          placeholder="Enter task description..."
         />
       </div>
       <div className="flex flex-col gap-2">
